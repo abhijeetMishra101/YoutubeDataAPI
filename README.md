@@ -32,5 +32,6 @@ Its just a basic project with barebone working UI but can serve as a template fo
 }
 ```
 4. Click the YoutubeDataAPI target in your project navigator --> Click on Info tab --> Go to the URL Types section --> Add a new section if a blank one is not present --> Add the reveresed client ID obtained in Step 2 to the URL Schemes section.
+5. Make sure Youtube Data v3 API is enabled in your developer console [Youtube Data v3 API Google Developer Console](https://console.cloud.google.com/apis/library/youtube.googleapis.com/)
 
 That's it! Should work with a breeze :trollface: :see_no_evil:
