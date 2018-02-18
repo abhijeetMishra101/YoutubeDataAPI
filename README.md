@@ -19,6 +19,9 @@ Its just a basic project with barebone working UI but can serve as a template fo
 ## Installation
 
 1. Download the reference code and edit the bundle ID to enter that of your own.
+![alt text](https://user-images.githubusercontent.com/17490066/36351878-fa93514c-14d5-11e8-9ee0-0100a8010e4b.png)
+
+
 2. Follow the steps mentioned here to create a [Google OAuth Client ID](https://developers.google.com/identity/sign-in/ios/start-integrating). Copy the client ID and reversed client ID obtained in the end, these will be needed.
 3. Open AppDelegate.m , inside method mentioned below enter the google client ID created above in Step 2.
 ```
