@@ -14,10 +14,14 @@
 
 @implementation YDListViewController
 
+- (void) viewDidLoad {
+    self.title = @"Youtube API Options";
+}
+
 #pragma mark - Helper Methods
 
 - (NSArray*) yd_getOptions {
-    return @[@"Upload a video"];
+    return @[@"View Channel Listing", @"Upload a video"];
 }
 
 #pragma mark - UITableView Methods
@@ -32,5 +36,18 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIViewController* nextViewController;
+    
+    if (indexPath.row == 0) {
+    
+        nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"YDVChannelTableViewController"];
+    }
+    else if (indexPath.row == 1) {
+        nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"YDUploadViewController"];
+        }
+    [self.navigationController pushViewController:nextViewController animated:YES];
+}
 
 @end

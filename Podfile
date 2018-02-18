@@ -8,6 +8,6 @@ target 'YoutubeDataAPISample' do
   # Pods for YoutubeDataAPISample
 
 pod 'GoogleSignIn'
-
+pod "youtube-ios-player-helper", "~> 0.1.4"
 
 end

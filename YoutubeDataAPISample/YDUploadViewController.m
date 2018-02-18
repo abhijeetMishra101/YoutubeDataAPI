@@ -17,6 +17,10 @@
 
 @implementation YDUploadViewController
 
+- (void) viewDidLoad {
+    self.title = @"Choose Video";
+}
+
 - (IBAction)chooseVideoClicked:(UIButton *)sender {
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Record a Video" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -63,6 +67,8 @@
     NSLog(@"VideoURL = %@", self.videoURL);
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
+    self.title = @"Uploading Video...";
+    
     [self uploadVideo];
 }
 
@@ -107,6 +113,12 @@
             NSString* responseString = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
             
             NSLog(@"response received: %@",responseString);
+            
+            UIAlertController* alertView = [UIAlertController alertControllerWithTitle:nil message:@"Video Uploaded!" preferredStyle:UIAlertControllerStyleAlert];
+            [alertView addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+            }]];
+            [self presentViewController:alertView animated:YES completion:nil];
         }
     }];
     [dataTask resume];

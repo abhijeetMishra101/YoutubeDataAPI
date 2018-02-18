@@ -19,16 +19,19 @@ PODS:
   - GTMSessionFetcher/Core (1.1.13)
   - GTMSessionFetcher/Full (1.1.13):
     - GTMSessionFetcher/Core (= 1.1.13)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - GoogleSignIn
+  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC CHECKSUMS:
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 5bb1eae636127de695590f50e7d248483eb891e6
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: c4ccdc5827c164aab723c82ff12d8c1eed6bc1ca
+PODFILE CHECKSUM: a95c4b74b6281ab0b20f7f4eb965781e0052efc1
 
 COCOAPODS: 1.4.0

@@ -16,6 +16,8 @@
 		EE3D227020306B7000DA4F64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3D226F20306B7000DA4F64 /* main.m */; };
 		EE3D22782031AA8B00DA4F64 /* YDListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3D22772031AA8A00DA4F64 /* YDListViewController.m */; };
 		EE3D227B2031ABE600DA4F64 /* YDUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3D227A2031ABE600DA4F64 /* YDUploadViewController.m */; };
+		EE3FC5222033220A00298C61 /* YDVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FC5212033220A00298C61 /* YDVideoTableViewCell.m */; };
+		EE3FC5252033223000298C61 /* YDVChannelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3FC5242033223000298C61 /* YDVChannelTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		EE3D22772031AA8A00DA4F64 /* YDListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDListViewController.m; sourceTree = "<group>"; };
 		EE3D22792031ABE600DA4F64 /* YDUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDUploadViewController.h; sourceTree = "<group>"; };
 		EE3D227A2031ABE600DA4F64 /* YDUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDUploadViewController.m; sourceTree = "<group>"; };
+		EE3FC5202033220A00298C61 /* YDVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDVideoTableViewCell.h; sourceTree = "<group>"; };
+		EE3FC5212033220A00298C61 /* YDVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDVideoTableViewCell.m; sourceTree = "<group>"; };
+		EE3FC5232033223000298C61 /* YDVChannelTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDVChannelTableViewController.h; sourceTree = "<group>"; };
+		EE3FC5242033223000298C61 /* YDVChannelTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDVChannelTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 				EE3D22772031AA8A00DA4F64 /* YDListViewController.m */,
 				EE3D22792031ABE600DA4F64 /* YDUploadViewController.h */,
 				EE3D227A2031ABE600DA4F64 /* YDUploadViewController.m */,
+				EE3FC5202033220A00298C61 /* YDVideoTableViewCell.h */,
+				EE3FC5212033220A00298C61 /* YDVideoTableViewCell.m */,
+				EE3FC5232033223000298C61 /* YDVChannelTableViewController.h */,
+				EE3FC5242033223000298C61 /* YDVChannelTableViewController.m */,
 			);
 			path = YoutubeDataAPISample;
 			sourceTree = "<group>";
@@ -184,11 +194,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeDataAPISample/Pods-YoutubeDataAPISample-resources.sh",
 				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -235,8 +247,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3FC5252033223000298C61 /* YDVChannelTableViewController.m in Sources */,
 				EE3D226520306B7000DA4F64 /* ViewController.m in Sources */,
 				EE3D22782031AA8B00DA4F64 /* YDListViewController.m in Sources */,
+				EE3FC5222033220A00298C61 /* YDVideoTableViewCell.m in Sources */,
 				EE3D227020306B7000DA4F64 /* main.m in Sources */,
 				EE3D227B2031ABE600DA4F64 /* YDUploadViewController.m in Sources */,
 				EE3D226220306B7000DA4F64 /* AppDelegate.m in Sources */,

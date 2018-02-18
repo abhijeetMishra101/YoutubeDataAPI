@@ -53,16 +53,13 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListCell" id="IFt-ZL-cOS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListCell" id="IFt-ZL-cOS">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IFt-ZL-cOS" id="cYi-gx-NLd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Ejf-1b-Hb9" kind="show" id="6P4-IG-Xrg"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -111,7 +108,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Y4-wL-dgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191.2" y="195.6521739130435"/>
+            <point key="canvasLocation" x="1415" y="150"/>
+        </scene>
+        <!--Channel Table View Controller-->
+        <scene sceneID="yFK-Ro-nVY">
+            <objects>
+                <tableViewController storyboardIdentifier="YDVChannelTableViewController" id="B1c-CO-h3m" customClass="YDVChannelTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WZz-Bi-RZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="YDVideoTableViewCell" id="Ycc-Du-M6h" customClass="YDVideoTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ycc-Du-M6h" id="pot-jA-6ll">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-jX-O4s" userLabel="Video Play View" customClass="YTPlayerView">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cEC-jX-O4s" firstAttribute="top" secondItem="pot-jA-6ll" secondAttribute="top" id="2G9-dR-gpx"/>
+                                        <constraint firstAttribute="trailing" secondItem="cEC-jX-O4s" secondAttribute="trailing" id="Klg-bc-1xL"/>
+                                        <constraint firstItem="cEC-jX-O4s" firstAttribute="leading" secondItem="pot-jA-6ll" secondAttribute="leading" id="d2r-q6-bFh"/>
+                                        <constraint firstAttribute="bottom" secondItem="cEC-jX-O4s" secondAttribute="bottom" id="mNp-2f-7vJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playerView" destination="cEC-jX-O4s" id="oNt-Sv-eac"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B1c-CO-h3m" id="w7X-Uy-Hu4"/>
+                            <outlet property="delegate" destination="B1c-CO-h3m" id="TGm-Nc-QF2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="POP-Uz-Kl5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2174" y="196"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ObY-cg-0zj">
